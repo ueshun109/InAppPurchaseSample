@@ -6,13 +6,223 @@
       "internalID" : "0D7FD5B6",
       "localizations" : [
         {
-          "description" : "",
-          "displayName" : "hoge",
+          "description" : "Filling and refreshing, this smoothie will fi",
+          "displayName" : "Berry Blue",
           "locale" : "en_US"
         }
       ],
-      "productID" : "com.sample.id",
-      "referenceName" : "hoge",
+      "productID" : "recipe.berry-blue",
+      "referenceName" : "Berry Blue",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "5CE7420B",
+      "localizations" : [
+        {
+          "description" : "Packed with vitamin A and C, Carrot Chops is ",
+          "displayName" : "Carrot Chops",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.carrot-chops",
+      "referenceName" : "Carrot Chops",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "A7668F5D",
+      "localizations" : [
+        {
+          "description" : "Enjoy the tropical flavors of coconut and pin",
+          "displayName" : "Crazy Colada",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.crazy-colada",
+      "referenceName" : "Crazy Colada",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "583E2A49",
+      "localizations" : [
+        {
+          "description" : "This is not just any lemonade.",
+          "displayName" : "Hulking Lemonade",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.hulking-lemonade",
+      "referenceName" : "Hulking Lemonade",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "4849CDF7",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Kiwi Cutie",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.kiwi-cutie",
+      "referenceName" : "Kiwi Cutie",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "5C4069B4",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Lemonberry",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.lemonberry",
+      "referenceName" : "Lemonberry",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "43BB792F",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Love You Berry Much",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.love-you-berry-much",
+      "referenceName" : "Love You Berry Much",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "F56A8C4F",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Mango Jambo",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.mango-jambo",
+      "referenceName" : "Mango Jambo",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "5210D296",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "One in a Melon",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.one-in-a-melon",
+      "referenceName" : "One in a Melon",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "F7DBA0D8",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Papa's Papaya",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.papas-papaya",
+      "referenceName" : "Papa's Papaya",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "F0210500",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Peanut Butter Cup",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.peanut-butter-cup",
+      "referenceName" : "Peanut Butter Cup",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "04D0B419",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Sailor Man",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.sailor-man",
+      "referenceName" : "Sailor Man",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "EDE0D1C2",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "That's a Smore!",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.thats-a-smore",
+      "referenceName" : "That's a Smore!",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "FDDD81EF",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "That's Berry Bananas!",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.thats-berry-bananas",
+      "referenceName" : "That's Berry Bananas",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "9DBF395D",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Tropical Blue",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "recipe.tropical-blue",
+      "referenceName" : "Tropical Blue",
       "type" : "Consumable"
     }
   ],
