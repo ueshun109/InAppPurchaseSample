@@ -1,0 +1,29 @@
+{
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "0D7FD5B6",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "hoge",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.sample.id",
+      "referenceName" : "hoge",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}

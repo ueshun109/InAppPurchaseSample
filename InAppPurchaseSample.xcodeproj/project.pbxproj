@@ -15,6 +15,8 @@
 		F41E25A0251D7626008B4654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41E259E251D7626008B4654 /* LaunchScreen.storyboard */; };
 		F41E25AB251D7626008B4654 /* InAppPurchaseSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E25AA251D7626008B4654 /* InAppPurchaseSampleTests.swift */; };
 		F41E25B6251D7626008B4654 /* InAppPurchaseSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E25B5251D7626008B4654 /* InAppPurchaseSampleUITests.swift */; };
+		F41E25C7251D7703008B4654 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = F41E25C6251D76F8008B4654 /* Configuration.storekit */; };
+		F41E25CE251D770A008B4654 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = F41E25C6251D76F8008B4654 /* Configuration.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		F41E25B1251D7626008B4654 /* InAppPurchaseSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppPurchaseSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41E25B5251D7626008B4654 /* InAppPurchaseSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseSampleUITests.swift; sourceTree = "<group>"; };
 		F41E25B7251D7626008B4654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F41E25C6251D76F8008B4654 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				F41E259E251D7626008B4654 /* LaunchScreen.storyboard */,
 				F41E25A1251D7626008B4654 /* Info.plist */,
 				F41E259B251D7626008B4654 /* Preview Content */,
+				F41E25C6251D76F8008B4654 /* Configuration.storekit */,
 			);
 			path = InAppPurchaseSample;
 			sourceTree = "<group>";
@@ -240,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41E25A0251D7626008B4654 /* LaunchScreen.storyboard in Resources */,
+				F41E25CE251D770A008B4654 /* Configuration.storekit in Resources */,
 				F41E259D251D7626008B4654 /* Preview Assets.xcassets in Resources */,
 				F41E259A251D7626008B4654 /* Assets.xcassets in Resources */,
 			);
@@ -249,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41E25C7251D7703008B4654 /* Configuration.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
