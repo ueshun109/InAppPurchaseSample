@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F41E2594251D7625008B4654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E2593251D7625008B4654 /* AppDelegate.swift */; };
 		F41E2596251D7625008B4654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E2595251D7625008B4654 /* SceneDelegate.swift */; };
-		F41E2598251D7625008B4654 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E2597251D7625008B4654 /* ContentView.swift */; };
+		F41E2598251D7625008B4654 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E2597251D7625008B4654 /* HomeView.swift */; };
 		F41E259A251D7626008B4654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41E2599251D7626008B4654 /* Assets.xcassets */; };
 		F41E259D251D7626008B4654 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41E259C251D7626008B4654 /* Preview Assets.xcassets */; };
 		F41E25A0251D7626008B4654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41E259E251D7626008B4654 /* LaunchScreen.storyboard */; };
@@ -23,6 +23,9 @@
 		F41E25EA251D9834008B4654 /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E25E9251D9834008B4654 /* Smoothie.swift */; };
 		F41E25F2251EE5D5008B4654 /* PurchaseProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E25F1251EE5D5008B4654 /* PurchaseProductTest.swift */; };
 		F41E25F7251EE91D008B4654 /* PurchaseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E25F6251EE91D008B4654 /* PurchaseProduct.swift */; };
+		F41E265F25289C46008B4654 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E265E25289C46008B4654 /* HomeViewModel.swift */; };
+		F41E26672528A18C008B4654 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E26662528A18C008B4654 /* CardView.swift */; };
+		F41E26722528A288008B4654 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E26712528A288008B4654 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,7 @@
 		F41E2590251D7625008B4654 /* InAppPurchaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41E2593251D7625008B4654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F41E2595251D7625008B4654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F41E2597251D7625008B4654 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F41E2597251D7625008B4654 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F41E2599251D7626008B4654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F41E259C251D7626008B4654 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F41E259F251D7626008B4654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +67,9 @@
 		F41E25E9251D9834008B4654 /* Smoothie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smoothie.swift; sourceTree = "<group>"; };
 		F41E25F1251EE5D5008B4654 /* PurchaseProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductTest.swift; sourceTree = "<group>"; };
 		F41E25F6251EE91D008B4654 /* PurchaseProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProduct.swift; sourceTree = "<group>"; };
+		F41E265E25289C46008B4654 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F41E26662528A18C008B4654 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F41E26712528A288008B4654 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +124,10 @@
 				F41E25DF251D7CBD008B4654 /* Helper */,
 				F41E2593251D7625008B4654 /* AppDelegate.swift */,
 				F41E2595251D7625008B4654 /* SceneDelegate.swift */,
-				F41E2597251D7625008B4654 /* ContentView.swift */,
+				F41E2597251D7625008B4654 /* HomeView.swift */,
+				F41E265E25289C46008B4654 /* HomeViewModel.swift */,
+				F41E26662528A18C008B4654 /* CardView.swift */,
+				F41E26712528A288008B4654 /* CardViewModel.swift */,
 				F41E2599251D7626008B4654 /* Assets.xcassets */,
 				F41E259E251D7626008B4654 /* LaunchScreen.storyboard */,
 				F41E25A1251D7626008B4654 /* Info.plist */,
@@ -143,8 +152,8 @@
 			children = (
 				F41E25D2251D77D8008B4654 /* DownloadProductTest.swift */,
 				F41E25AA251D7626008B4654 /* InAppPurchaseSampleTests.swift */,
-				F41E25AC251D7626008B4654 /* Info.plist */,
 				F41E25F1251EE5D5008B4654 /* PurchaseProductTest.swift */,
+				F41E25AC251D7626008B4654 /* Info.plist */,
 			);
 			path = InAppPurchaseSampleTests;
 			sourceTree = "<group>";
@@ -307,12 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41E2594251D7625008B4654 /* AppDelegate.swift in Sources */,
+				F41E26672528A18C008B4654 /* CardView.swift in Sources */,
 				F41E25EA251D9834008B4654 /* Smoothie.swift in Sources */,
 				F41E25D8251D79AC008B4654 /* DownloadProduct.swift in Sources */,
+				F41E26722528A288008B4654 /* CardViewModel.swift in Sources */,
+				F41E265F25289C46008B4654 /* HomeViewModel.swift in Sources */,
 				F41E2596251D7625008B4654 /* SceneDelegate.swift in Sources */,
 				F41E25E1251D7CC7008B4654 /* ExtArray.swift in Sources */,
 				F41E25F7251EE91D008B4654 /* PurchaseProduct.swift in Sources */,
-				F41E2598251D7625008B4654 /* ContentView.swift in Sources */,
+				F41E2598251D7625008B4654 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

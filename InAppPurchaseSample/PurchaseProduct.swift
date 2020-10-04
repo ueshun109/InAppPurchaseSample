@@ -8,7 +8,7 @@
 import Foundation
 import StoreKit
 
-protocol PurchasedResultNotification {
+protocol PurchasedResultNotification: AnyObject {
 	/// Notify that the transaction is complete.
 	/// - Parameter transaction: Finished transaction.
 	func completed(transaction: SKPaymentTransaction)
@@ -23,7 +23,7 @@ final class PurchaseProduct: NSObject {
 	private override init() { }
 	static let shared = PurchaseProduct()
 	
-	var delegate: PurchasedResultNotification?
+	weak var delegate: PurchasedResultNotification?
 	
 	func callAsFunction(product: SKProduct) {
 		let payment = SKPayment(product: product)
@@ -48,5 +48,15 @@ extension PurchaseProduct: SKPaymentTransactionObserver {
 					break
 			}
 		}
+	}
+}
+
+class ViewModel: PurchasedResultNotification {
+	func completed(transaction: SKPaymentTransaction) {
+		SKPaymentQueue.default().finishTransaction(transaction)
+	}
+	
+	func failed(transaction: SKPaymentTransaction) {
+		SKPaymentQueue.default().finishTransaction(transaction)
 	}
 }

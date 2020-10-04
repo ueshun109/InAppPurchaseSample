@@ -58,6 +58,10 @@ class PurchaseProductTest: XCTestCase, DownloadedProductNotification, PurchasedR
 		XCTAssertTrue(isFail(transaction: transaction), "transaction state is a failed")
 	}
 	
+	override func tearDown() {
+		session = nil
+	}
+	
 	private func isSuccess(transaction: SKPaymentTransaction) -> Bool {
 		transaction.payment.productIdentifier == Smoothie.allIDs.first && transaction.transactionState == .purchased
 	}

@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import StoreKit
 
 struct Smoothie: Identifiable {
 	var id: String
 	var title: String
+	var price: String
 }
 
 extension Smoothie {
@@ -33,21 +35,21 @@ extension Smoothie {
 	
 	static let allIDs: [Smoothie.ID] = all.map { $0.id }
 	
-	static let berryBlue = Smoothie(id: "recipe.berry-blue", title: "Berry Blue")
-	static let carrotChops = Smoothie(id: "recipe.carrot-chops", title: "Carrot Chops")
-	static let crazyColada = Smoothie(id: "recipe.crazy-colada", title: "Crazy Colada")
-	static let hulkingLemonade = Smoothie(id: "recipe.hulking-lemonade", title: "Hulking Lemonade")
-	static let kiwiCutie = Smoothie(id: "recipe.kiwi-cutie", title: "Kiwi Cutie")
-	static let lemonberry = Smoothie(id: "recipe.lemonberry", title: "Lemonberry")
-	static let loveYouBerryMuch = Smoothie(id: "recipe.love-you-berry-much", title: "Love You Berry Much")
-	static let mangoJambo = Smoothie(id: "recipe.mango-jambo", title: "Mango Jambo")
-	static let oneInAMelon = Smoothie(id: "recipe.one-in-a-melon", title: "One in a Melon")
-	static let papasPapaya = Smoothie(id: "recipe.papas-papaya", title: "Papa's Papaya")
-	static let peanutButterCup = Smoothie(id: "recipe.peanut-butter-cup", title: "Peanut Butter Cup")
-	static let sailorMan = Smoothie(id: "recipe.sailor-man", title: "Sailor Man")
-	static let thatsASmore = Smoothie(id: "recipe.thats-a-smore", title: "That's a Smore!")
-	static let thatsBerryBananas = Smoothie(id: "recipe.thats-berry-bananas", title: "That's Berry Bananas!")
-	static let tropicalBlue = Smoothie(id: "recipe.tropical-blue", title: "Tropical Blue")
+	static let berryBlue = Smoothie(id: "berry-blue", title: "Berry Blue", price: "500")
+	static let carrotChops = Smoothie(id: "carrot-chops", title: "Carrot Chops", price: "500")
+	static let crazyColada = Smoothie(id: "crazy-colada", title: "Crazy Colada", price: "500")
+	static let hulkingLemonade = Smoothie(id: "hulking-lemonade", title: "Hulking Lemonade", price: "500")
+	static let kiwiCutie = Smoothie(id: "kiwi-cutie", title: "Kiwi Cutie", price: "500")
+	static let lemonberry = Smoothie(id: "lemonberry", title: "Lemonberry", price: "500")
+	static let loveYouBerryMuch = Smoothie(id: "love-you-berry-much", title: "Love You Berry Much", price: "500")
+	static let mangoJambo = Smoothie(id: "mango-jambo", title: "Mango Jambo", price: "500")
+	static let oneInAMelon = Smoothie(id: "one-in-a-melon", title: "One in a Melon", price: "500")
+	static let papasPapaya = Smoothie(id: "papas-papaya", title: "Papa's Papaya", price: "500")
+	static let peanutButterCup = Smoothie(id: "peanut-butter-cup", title: "Peanut Butter Cup", price: "500")
+	static let sailorMan = Smoothie(id: "sailor-man", title: "Sailor Man", price: "500")
+	static let thatsASmore = Smoothie(id: "thats-a-smore", title: "That's a Smore!", price: "500")
+	static let thatsBerryBananas = Smoothie(id: "thats-berry-bananas", title: "That's Berry Bananas!", price: "500")
+	static let tropicalBlue = Smoothie(id: "tropical-blue", title: "Tropical Blue", price: "500")
 }
 
 extension Smoothie: Hashable {

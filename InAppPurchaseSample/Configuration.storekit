@@ -11,7 +11,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.berry-blue",
+      "productID" : "berry-blue",
       "referenceName" : "Berry Blue",
       "type" : "Consumable"
     },
@@ -26,7 +26,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.carrot-chops",
+      "productID" : "carrot-chops",
       "referenceName" : "Carrot Chops",
       "type" : "Consumable"
     },
@@ -41,7 +41,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.crazy-colada",
+      "productID" : "crazy-colada",
       "referenceName" : "Crazy Colada",
       "type" : "Consumable"
     },
@@ -56,7 +56,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.hulking-lemonade",
+      "productID" : "hulking-lemonade",
       "referenceName" : "Hulking Lemonade",
       "type" : "Consumable"
     },
@@ -71,7 +71,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.kiwi-cutie",
+      "productID" : "kiwi-cutie",
       "referenceName" : "Kiwi Cutie",
       "type" : "Consumable"
     },
@@ -86,7 +86,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.lemonberry",
+      "productID" : "lemonberry",
       "referenceName" : "Lemonberry",
       "type" : "Consumable"
     },
@@ -101,7 +101,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.love-you-berry-much",
+      "productID" : "love-you-berry-much",
       "referenceName" : "Love You Berry Much",
       "type" : "Consumable"
     },
@@ -116,7 +116,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.mango-jambo",
+      "productID" : "mango-jambo",
       "referenceName" : "Mango Jambo",
       "type" : "Consumable"
     },
@@ -131,7 +131,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.one-in-a-melon",
+      "productID" : "one-in-a-melon",
       "referenceName" : "One in a Melon",
       "type" : "Consumable"
     },
@@ -146,7 +146,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.papas-papaya",
+      "productID" : "papas-papaya",
       "referenceName" : "Papa's Papaya",
       "type" : "Consumable"
     },
@@ -161,7 +161,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.peanut-butter-cup",
+      "productID" : "peanut-butter-cup",
       "referenceName" : "Peanut Butter Cup",
       "type" : "Consumable"
     },
@@ -176,7 +176,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.sailor-man",
+      "productID" : "sailor-man",
       "referenceName" : "Sailor Man",
       "type" : "Consumable"
     },
@@ -191,7 +191,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.thats-a-smore",
+      "productID" : "thats-a-smore",
       "referenceName" : "That's a Smore!",
       "type" : "Consumable"
     },
@@ -206,7 +206,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.thats-berry-bananas",
+      "productID" : "thats-berry-bananas",
       "referenceName" : "That's Berry Bananas",
       "type" : "Consumable"
     },
@@ -221,7 +221,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "recipe.tropical-blue",
+      "productID" : "tropical-blue",
       "referenceName" : "Tropical Blue",
       "type" : "Consumable"
     }

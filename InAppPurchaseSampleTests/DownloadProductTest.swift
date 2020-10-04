@@ -32,10 +32,10 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 	}
 	
 	func testIfThereNoUnexpectedProducts_Success() {
-		let ids: [String] = ["recipe.berry-blue", "recipe.carrot-chops", "recipe.crazy-colada", "recipe.hulking-lemonade",
-							 "recipe.kiwi-cutie", "recipe.lemonberry", "recipe.love-you-berry-much", "recipe.mango-jambo",
-							 "recipe.one-in-a-melon", "recipe.papas-papaya", "recipe.peanut-butter-cup", "recipe.sailor-man",
-							 "recipe.thats-a-smore", "recipe.thats-berry-bananas", "recipe.tropical-blue"]
+		let ids: [String] = ["berry-blue", "carrot-chops", "crazy-colada", "hulking-lemonade",
+							 "kiwi-cutie", "lemonberry", "love-you-berry-much", "mango-jambo",
+							 "one-in-a-melon", "papas-papaya", "peanut-butter-cup", "sailor-man",
+							 "thats-a-smore", "thats-berry-bananas", "tropical-blue"]
 		
 		downloadProduct(productIds: ids)
 		wait(for: [getProductExp], timeout: 5.0)
@@ -49,10 +49,10 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 	}
 	
 	func testIfThereIsUnexpectedProducts_Failure() {
-		let ids: [String] = ["recipe.berry-blue", "recipe.carrot-chops", "recipe.crazy-colada", "recipe.hulking-lemonade",
-							 "recipe.kiwi-cutie", "recipe.dummy", "recipe.love-you-berry-much", "recipe.mango-jambo",
-							 "recipe.one-in-a-melon", "recipe.papas-papaya", "recipe.peanut-butter-cup", "recipe.sailor-man",
-							 "recipe.thats-a-smore", "recipe.thats-berry-bananas", "recipe.tropical-blue"]
+		let ids: [String] = ["berry-blue", "carrot-chops", "crazy-colada", "hulking-lemonade",
+							 "kiwi-cutie", "dummy", "love-you-berry-much", "mango-jambo",
+							 "one-in-a-melon", "papas-papaya", "peanut-butter-cup", "sailor-man",
+							 "thats-a-smore", "thats-berry-bananas", "tropical-blue"]
 		
 		downloadProduct(productIds: ids)
 		wait(for: [getProductExp], timeout: 5.0)
@@ -60,12 +60,12 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 		if let downloadError = self.downloadError {
 			switch downloadError {
 				case .invalidProduct:
-					XCTAssertEqual(downloadError, DownloadProductError.invalidProduct, "recipe.dummy is must invalid")
+					XCTAssertEqual(downloadError, DownloadProductError.invalidProduct, "dummy is must invalid")
 				default:
-					XCTFail("recipe.dummy is must invalid")
+					XCTFail("dummy is must invalid")
 			}
 		} else {
-			XCTFail("recipe.dummy is must invalid")
+			XCTFail("dummy is must invalid")
 		}
 	}
 	

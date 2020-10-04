@@ -20,7 +20,7 @@ enum DownloadProductError: Error {
 	}
 }
 
-protocol DownloadedProductNotification {
+protocol DownloadedProductNotification: AnyObject {
 	/// Notify donwloaded product.
 	/// - Parameters:
 	///   - products: SKProduct
@@ -35,7 +35,7 @@ final class DownloadProduct: NSObject {
 	
 	private var productsRequest: SKProductsRequest?
 	
-	var delegate: DownloadedProductNotification?
+	weak var delegate: DownloadedProductNotification?
 	
 	func callAsFunction(productIds: [String]) {
 		productsRequest = SKProductsRequest(productIdentifiers: Set(productIds))
