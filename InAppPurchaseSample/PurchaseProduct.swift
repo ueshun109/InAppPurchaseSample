@@ -38,25 +38,13 @@ extension PurchaseProduct: SKPaymentTransactionObserver {
 			switch transaction.transactionState {
 				case .purchased, .restored:
 					delegate?.completed(transaction: transaction)
-					SKPaymentQueue.default().finishTransaction(transaction)
 				case .failed:
 					delegate?.failed(transaction: transaction)
-					SKPaymentQueue.default().finishTransaction(transaction)
 				case .purchasing, .deferred:
 					break
 				@unknown default:
 					break
 			}
 		}
-	}
-}
-
-class ViewModel: PurchasedResultNotification {
-	func completed(transaction: SKPaymentTransaction) {
-		SKPaymentQueue.default().finishTransaction(transaction)
-	}
-	
-	func failed(transaction: SKPaymentTransaction) {
-		SKPaymentQueue.default().finishTransaction(transaction)
 	}
 }

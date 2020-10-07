@@ -14,22 +14,23 @@ final class CardViewModel: ObservableObject {
 	
 	init(purchase: PurchaseProduct) {
 		self.purchase = purchase
-		self.purchase.delegate = self
 	}
 	
 	func buy(product: SKProduct) {
-		unLock = true
-//		purchase(product: product)
+		self.purchase.delegate = self
+		purchase(product: product)
 	}
 }
 
 extension CardViewModel: PurchasedResultNotification {
 	func completed(transaction: SKPaymentTransaction) {
 		unLock = true
-		print("complete")
+		self.purchase.delegate = nil
+		SKPaymentQueue.default().finishTransaction(transaction)
 	}
 	
 	func failed(transaction: SKPaymentTransaction) {
-		print("failed")
+		self.purchase.delegate = nil
+		SKPaymentQueue.default().finishTransaction(transaction)
 	}
 }

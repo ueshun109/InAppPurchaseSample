@@ -31,6 +31,17 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 		session.clearTransactions()
 	}
 	
+	func testA() {
+		downloadProduct(productIds: ["recipe.all"])
+		wait(for: [getProductExp], timeout: 5.0)
+		print(productIds)
+//		if let downloadError = self.downloadError {
+//			XCTFail(downloadError.message)
+//		} else {
+//			XCTAssertTrue(self.productIds.isEmpty, "There are no unexpected products.")
+//		}
+	}
+	
 	func testIfThereNoUnexpectedProducts_Success() {
 		let ids: [String] = ["berry-blue", "carrot-chops", "crazy-colada", "hulking-lemonade",
 							 "kiwi-cutie", "lemonberry", "love-you-berry-much", "mango-jambo",
