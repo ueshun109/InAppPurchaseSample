@@ -71,7 +71,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../../InAppPurchaseSample/Configuration.storekit">
+         identifier = "../../InAppPurchaseSample/Subscription.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction

@@ -26,6 +26,8 @@
 		F41E265F25289C46008B4654 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E265E25289C46008B4654 /* HomeViewModel.swift */; };
 		F41E26672528A18C008B4654 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E26662528A18C008B4654 /* CardView.swift */; };
 		F41E26722528A288008B4654 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E26712528A288008B4654 /* CardViewModel.swift */; };
+		F4E655E7252DB465002A3E9F /* Subscription.storekit in Resources */ = {isa = PBXBuildFile; fileRef = F4E655E3252DB20F002A3E9F /* Subscription.storekit */; };
+		F4E655EB252DB469002A3E9F /* Subscription.storekit in Resources */ = {isa = PBXBuildFile; fileRef = F4E655E3252DB20F002A3E9F /* Subscription.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		F41E265E25289C46008B4654 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F41E26662528A18C008B4654 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F41E26712528A288008B4654 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		F4E655E3252DB20F002A3E9F /* Subscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscription.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 				F41E25A1251D7626008B4654 /* Info.plist */,
 				F41E259B251D7626008B4654 /* Preview Content */,
 				F41E25C6251D76F8008B4654 /* Configuration.storekit */,
+				F4E655E3252DB20F002A3E9F /* Subscription.storekit */,
 				F41E25D7251D79AC008B4654 /* DownloadProduct.swift */,
 				F41E25F6251EE91D008B4654 /* PurchaseProduct.swift */,
 			);
@@ -287,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41E25A0251D7626008B4654 /* LaunchScreen.storyboard in Resources */,
+				F4E655E7252DB465002A3E9F /* Subscription.storekit in Resources */,
 				F41E25CE251D770A008B4654 /* Configuration.storekit in Resources */,
 				F41E259D251D7626008B4654 /* Preview Assets.xcassets in Resources */,
 				F41E259A251D7626008B4654 /* Assets.xcassets in Resources */,
@@ -298,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41E25C7251D7703008B4654 /* Configuration.storekit in Resources */,
+				F4E655EB252DB469002A3E9F /* Subscription.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

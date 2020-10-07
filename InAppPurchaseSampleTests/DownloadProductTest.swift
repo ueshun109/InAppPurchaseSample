@@ -24,22 +24,23 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 		getProductExp = XCTestExpectation(description: "Download product item")
 		
 		downloadProduct.delegate = self
-		
-		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
+	}
+	
+	func testIfThereNoUnexpectedSubscriptionProduct_Success() {
+		let url = Bundle.main.url(forResource: "Subscription", withExtension: "storekit")!
 		session = try! SKTestSession(contentsOf: url)
 		session.disableDialogs = true
 		session.clearTransactions()
-	}
-	
-	func testA() {
-		downloadProduct(productIds: ["recipe.all"])
+		
+		downloadProduct(productIds: ["all.drinking"])
+		
 		wait(for: [getProductExp], timeout: 5.0)
-		print(productIds)
-//		if let downloadError = self.downloadError {
-//			XCTFail(downloadError.message)
-//		} else {
-//			XCTAssertTrue(self.productIds.isEmpty, "There are no unexpected products.")
-//		}
+		
+		if let downloadError = self.downloadError {
+			XCTFail(downloadError.message)
+		} else {
+			XCTAssertEqual(productIds.first, "all.drinking")
+		}
 	}
 	
 	func testIfThereNoUnexpectedProducts_Success() {
@@ -47,6 +48,11 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 							 "kiwi-cutie", "lemonberry", "love-you-berry-much", "mango-jambo",
 							 "one-in-a-melon", "papas-papaya", "peanut-butter-cup", "sailor-man",
 							 "thats-a-smore", "thats-berry-bananas", "tropical-blue"]
+		
+		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
+		session = try! SKTestSession(contentsOf: url)
+		session.disableDialogs = true
+		session.clearTransactions()
 		
 		downloadProduct(productIds: ids)
 		wait(for: [getProductExp], timeout: 5.0)
@@ -60,6 +66,11 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 	}
 	
 	func testIfThereIsUnexpectedProducts_Failure() {
+		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
+		session = try! SKTestSession(contentsOf: url)
+		session.disableDialogs = true
+		session.clearTransactions()
+		
 		let ids: [String] = ["berry-blue", "carrot-chops", "crazy-colada", "hulking-lemonade",
 							 "kiwi-cutie", "dummy", "love-you-berry-much", "mango-jambo",
 							 "one-in-a-melon", "papas-papaya", "peanut-butter-cup", "sailor-man",

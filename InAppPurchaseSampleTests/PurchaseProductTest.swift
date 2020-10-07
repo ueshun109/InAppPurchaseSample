@@ -28,24 +28,44 @@ class PurchaseProductTest: XCTestCase, DownloadedProductNotification, PurchasedR
 		download.delegate = self
 		purchase.delegate = self
 		SKPaymentQueue.default().add(purchase)
+	}
+	
+	func testPurchaseSubscription_Success() {
+		let url = Bundle.main.url(forResource: "Subscription", withExtension: "storekit")!
+		session = try! SKTestSession(contentsOf: url)
+		session.disableDialogs = true
+		session.clearTransactions()
 		
+		download(productIds: ["all.drinking"])
+		wait(for: [getProductExp], timeout: 5.0)
+		
+		purchase(product: product)
+		wait(for: [buyProductExp], timeout: 5.0)
+		
+		XCTAssertTrue(isSuccess(transaction: transaction, productId: "all.drinking"), "expected product id: all.drinking. But actual is \(transaction.payment.productIdentifier). Or transaction state is purchased.")
+	}
+	
+	func testPurchaseBerryBlue_Success() {
 		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
 		session = try! SKTestSession(contentsOf: url)
 		session.disableDialogs = true
 		session.clearTransactions()
-	}
-	
-	func testPurchaseBerryBlue_Success() {
+		
 		download(productIds: Smoothie.allIDs)
 		wait(for: [getProductExp], timeout: 5.0)
 
 		purchase(product: product)
 		wait(for: [buyProductExp], timeout: 5.0)
 		
-		XCTAssertTrue(isSuccess(transaction: transaction), "expected product id: \(Smoothie.allIDs.first!). But actual is \(transaction.payment.productIdentifier). Or transaction state is purchased.")
+		XCTAssertTrue(isSuccess(transaction: transaction, productId: Smoothie.allIDs.first!), "expected product id: \(Smoothie.allIDs.first!). But actual is \(transaction.payment.productIdentifier). Or transaction state is purchased.")
 	}
 	
 	func testPurchaseBerryBlue_Failed() {
+		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
+		session = try! SKTestSession(contentsOf: url)
+		session.disableDialogs = true
+		session.clearTransactions()
+		
 		// This is that whether transactions fail in the test environment.
 		session.failTransactionsEnabled = true
 		
@@ -55,19 +75,19 @@ class PurchaseProductTest: XCTestCase, DownloadedProductNotification, PurchasedR
 		purchase(product: product)
 		wait(for: [buyProductExp], timeout: 5.0)
 		
-		XCTAssertTrue(isFail(transaction: transaction), "transaction state is a failed")
+		XCTAssertTrue(isFail(transaction: transaction, productId: Smoothie.allIDs.first!), "transaction state is a failed")
 	}
 	
 	override func tearDown() {
 		session = nil
 	}
 	
-	private func isSuccess(transaction: SKPaymentTransaction) -> Bool {
-		transaction.payment.productIdentifier == Smoothie.allIDs.first && transaction.transactionState == .purchased
+	private func isSuccess(transaction: SKPaymentTransaction, productId: String) -> Bool {
+		transaction.payment.productIdentifier == productId && transaction.transactionState == .purchased
 	}
 	
-	private func isFail(transaction: SKPaymentTransaction) -> Bool {
-		transaction.payment.productIdentifier == Smoothie.allIDs.first && transaction.transactionState == .failed
+	private func isFail(transaction: SKPaymentTransaction, productId: String) -> Bool {
+		transaction.payment.productIdentifier == productId && transaction.transactionState == .failed
 	}
 	
 	// MARK: - DownloadedProductNotification

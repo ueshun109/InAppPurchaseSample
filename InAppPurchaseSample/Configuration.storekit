@@ -230,37 +230,7 @@
 
   },
   "subscriptionGroups" : [
-    {
-      "id" : "571CB00A",
-      "localizations" : [
 
-      ],
-      "name" : "All you can drink",
-      "subscriptions" : [
-        {
-          "adHocOffers" : [
-
-          ],
-          "displayPrice" : "8.99",
-          "familyShareable" : false,
-          "groupNumber" : 1,
-          "internalID" : "F9429BB8",
-          "introductoryOffer" : null,
-          "localizations" : [
-            {
-              "description" : "",
-              "displayName" : "All you can drink",
-              "locale" : "en_US"
-            }
-          ],
-          "productID" : "recipe.all",
-          "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "All you can drink",
-          "subscriptionGroupID" : "571CB00A",
-          "type" : "RecurringSubscription"
-        }
-      ]
-    }
   ],
   "version" : {
     "major" : 1,
