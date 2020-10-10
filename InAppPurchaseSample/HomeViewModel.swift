@@ -9,15 +9,25 @@ import Foundation
 import Combine
 import StoreKit
 
+class Subscription {
+	var subscribed = false
+}
+
 final class HomeViewModel: ObservableObject {
-	@Published private(set) var smoothies: [SKProduct] = []
+	let smoothies = Smoothie.all
+	@Published private(set) var subscription = Subscription()
 	
 	private let download: DownloadProduct
+	private let purchase: PurchaseProduct
 	
-	init(download: DownloadProduct) {
+	init(download: DownloadProduct, purchase: PurchaseProduct) {
 		self.download = download
-		self.download.delegate = self
-		self.download(productIds: Smoothie.allIDs)
+		self.purchase = purchase
+	}
+	
+	func startSubscription() {
+		download.delegate = self
+		download(productIds: ["all.drinking"])
 	}
 }
 
@@ -31,6 +41,24 @@ extension HomeViewModel: DownloadedProductNotification {
 			print("products is empty")
 			return
 		}
-		smoothies = products
+		if let product = products.first, product.productIdentifier == "all.drinking" {
+			purchase.delegate = self
+			purchase(product: product)
+		}
+	}
+}
+
+extension HomeViewModel: PurchasedResultNotification {
+	func completed(transaction: SKPaymentTransaction) {
+		subscription.subscribed = true
+		download.delegate = nil
+		purchase.delegate = nil
+		SKPaymentQueue.default().finishTransaction(transaction)
+	}
+	
+	func failed(transaction: SKPaymentTransaction) {
+		download.delegate = nil
+		purchase.delegate = nil
+		SKPaymentQueue.default().finishTransaction(transaction)
 	}
 }

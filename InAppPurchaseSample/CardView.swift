@@ -11,16 +11,16 @@ import StoreKit
 struct CardView: View {
 	@ObservedObject var viewModel: CardViewModel
 	
-	let smoothie: SKProduct
+	let smoothie: Smoothie
 	
-	init(viewModel: CardViewModel, smoothie: SKProduct) {
+	init(viewModel: CardViewModel, smoothie: Smoothie) {
 		self.viewModel = viewModel
 		self.smoothie = smoothie
 	}
 	
 	var body: some View {
 		HStack {
-			Image(smoothie.productIdentifier)
+			Image(smoothie.id)
 				.resizable()
 				.aspectRatio(contentMode: .fill)
 				.frame(width: UIScreen.main.bounds.width / 4, height: UIScreen.main.bounds.width / 4)
@@ -35,16 +35,16 @@ struct CardView: View {
 						.isHidden(viewModel.unLock)
 				)
 			HStack {
-				Text(smoothie.localizedTitle)
+				Text(smoothie.title)
 					.font(.title3)
 					.fontWeight(.bold)
 					.lineLimit(2)
 				Spacer()
 				Button(action: {
-					viewModel.buy(product: smoothie)
+					viewModel.buy(product: smoothie.id)
 				}) {
 					VStack {
-						Text(viewModel.unLock ? "Purchased" : smoothie.regularPrice ?? "-")
+						Text(viewModel.unLock ? "Purchased" : smoothie.price)
 							.fontWeight(.semibold)
 							.minimumScaleFactor(0.4)
 							.lineLimit(1)
@@ -65,7 +65,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-		CardView(viewModel: .init(purchase: PurchaseProduct.shared), smoothie: SKProduct())
+		CardView(viewModel: .init(download: DownloadProduct.shared, purchase: PurchaseProduct.shared), smoothie: Smoothie.berryBlue)
     }
 }
 
