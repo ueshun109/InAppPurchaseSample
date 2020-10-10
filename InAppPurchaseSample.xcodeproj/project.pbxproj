@@ -123,22 +123,18 @@
 		F41E2592251D7625008B4654 /* InAppPurchaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				F4E655EF25314E21002A3E9F /* Presentation */,
+				F4E655F225314E52002A3E9F /* UseCase */,
 				F41E25E8251D9825008B4654 /* Entity */,
 				F41E25DF251D7CBD008B4654 /* Helper */,
 				F41E2593251D7625008B4654 /* AppDelegate.swift */,
 				F41E2595251D7625008B4654 /* SceneDelegate.swift */,
-				F41E2597251D7625008B4654 /* HomeView.swift */,
-				F41E265E25289C46008B4654 /* HomeViewModel.swift */,
-				F41E26662528A18C008B4654 /* CardView.swift */,
-				F41E26712528A288008B4654 /* CardViewModel.swift */,
 				F41E2599251D7626008B4654 /* Assets.xcassets */,
 				F41E259E251D7626008B4654 /* LaunchScreen.storyboard */,
 				F41E25A1251D7626008B4654 /* Info.plist */,
 				F41E259B251D7626008B4654 /* Preview Content */,
 				F41E25C6251D76F8008B4654 /* Configuration.storekit */,
 				F4E655E3252DB20F002A3E9F /* Subscription.storekit */,
-				F41E25D7251D79AC008B4654 /* DownloadProduct.swift */,
-				F41E25F6251EE91D008B4654 /* PurchaseProduct.swift */,
 			);
 			path = InAppPurchaseSample;
 			sourceTree = "<group>";
@@ -185,6 +181,42 @@
 				F41E25E9251D9834008B4654 /* Smoothie.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		F4E655EF25314E21002A3E9F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F4E655F125314E38002A3E9F /* Card */,
+				F4E655F025314E30002A3E9F /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F4E655F025314E30002A3E9F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F41E2597251D7625008B4654 /* HomeView.swift */,
+				F41E265E25289C46008B4654 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4E655F125314E38002A3E9F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F41E26662528A18C008B4654 /* CardView.swift */,
+				F41E26712528A288008B4654 /* CardViewModel.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		F4E655F225314E52002A3E9F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F41E25D7251D79AC008B4654 /* DownloadProduct.swift */,
+				F41E25F6251EE91D008B4654 /* PurchaseProduct.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
