@@ -16,66 +16,80 @@ class PurchaseProductTest: XCTestCase, DownloadedProductNotification, PurchasedR
 	private let download = DownloadProduct.shared
 	
 	private var getProductExp: XCTestExpectation!
-	private var buyProductExp: XCTestExpectation!
+	private var purchaseProductExp: XCTestExpectation!
 	private var product: SKProduct!
 	private var session: SKTestSession!
 	private var transaction: SKPaymentTransaction!
 	
-	override func setUp() {
+	override func setUpWithError() throws {
 		getProductExp = XCTestExpectation(description: "Download product item")
-		buyProductExp = XCTestExpectation(description: "Purchase product item")
+		purchaseProductExp = XCTestExpectation(description: "Purchase product item")
+		
+		session = try SKTestSession(configurationFileNamed: "Configuration")
+		session.disableDialogs = true
+		session.clearTransactions()
+		session.failTransactionsEnabled = false
+		session.interruptedPurchasesEnabled = false
 
 		download.delegate = self
 		purchase.delegate = self
-		SKPaymentQueue.default().add(purchase)
-	}
-	
-	func testPurchaseSubscription_Success() {
-		let url = Bundle.main.url(forResource: "Subscription", withExtension: "storekit")!
-		session = try! SKTestSession(contentsOf: url)
-		session.disableDialogs = true
-		session.clearTransactions()
 		
-		download(productIds: ["all.drinking"])
-		wait(for: [getProductExp], timeout: 5.0)
-		
-		purchase(product: product)
-		wait(for: [buyProductExp], timeout: 5.0)
-		
-		XCTAssertTrue(isSuccess(transaction: transaction, productId: "all.drinking"), "expected product id: all.drinking. But actual is \(transaction.payment.productIdentifier). Or transaction state is purchased.")
+		download(productIds: Smoothie.allIDs)
+		wait(for: [getProductExp], timeout: 0.1)
 	}
 	
 	func testPurchaseBerryBlue_Success() {
-		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
-		session = try! SKTestSession(contentsOf: url)
-		session.disableDialogs = true
-		session.clearTransactions()
+		guard let product = product else {
+			XCTFail("Must fetch product")
+			return
+		}
 		
-		download(productIds: Smoothie.allIDs)
-		wait(for: [getProductExp], timeout: 5.0)
-
 		purchase(product: product)
-		wait(for: [buyProductExp], timeout: 5.0)
+		wait(for: [purchaseProductExp], timeout: 3.0)
 		
 		XCTAssertTrue(isSuccess(transaction: transaction, productId: Smoothie.allIDs.first!), "expected product id: \(Smoothie.allIDs.first!). But actual is \(transaction.payment.productIdentifier). Or transaction state is purchased.")
+		
+		SKPaymentQueue.default().finishTransaction(transaction)
 	}
 	
-	func testPurchaseBerryBlue_Failed() {
-		let url = Bundle.main.url(forResource: "Configuration", withExtension: "storekit")!
-		session = try! SKTestSession(contentsOf: url)
-		session.disableDialogs = true
-		session.clearTransactions()
-		
+	func testPurchaseBerryBlue_successAfterInterrupted() {
+		guard let product = product else {
+			XCTFail("Must fetch product")
+			return
+		}
 		// This is that whether transactions fail in the test environment.
-		session.failTransactionsEnabled = true
+		session.interruptedPurchasesEnabled = true
 		
-		download(productIds: Smoothie.allIDs)
-		wait(for: [getProductExp], timeout: 5.0)
-
 		purchase(product: product)
-		wait(for: [buyProductExp], timeout: 5.0)
+		wait(for: [purchaseProductExp], timeout: 3.0)
 		
-		XCTAssertTrue(isFail(transaction: transaction, productId: Smoothie.allIDs.first!), "transaction state is a failed")
+		session.allTransactions().forEach { transaction in
+			do {
+				try session.resolveIssueForTransaction(identifier: transaction.identifier)
+			} catch {
+				XCTFail()
+			}
+		}
+		
+		purchaseProductExp = XCTestExpectation(description: "Purchase product item")
+		wait(for: [purchaseProductExp], timeout: 3.0)
+		
+		XCTAssertTrue(isSuccess(transaction: transaction, productId: Smoothie.allIDs.first!), "\(transaction.transactionState.rawValue) is not purchased")
+		SKPaymentQueue.default().finishTransaction(transaction!)
+	}
+	
+	func testPurchaseBerryBlue_failed() {
+		guard let product = product else {
+			XCTFail("Must fetch product")
+			return
+		}
+		
+		session.failTransactionsEnabled = true
+		purchase(product: product)
+		
+		wait(for: [purchaseProductExp], timeout: 3.0)
+		XCTAssertTrue(isFail(transaction: transaction, productId: Smoothie.allIDs.first!), "\(transaction.transactionState.rawValue) is not failed")
+		SKPaymentQueue.default().finishTransaction(transaction!)
 	}
 	
 	override func tearDown() {
@@ -101,11 +115,11 @@ class PurchaseProductTest: XCTestCase, DownloadedProductNotification, PurchasedR
 	
 	func completed(transaction: SKPaymentTransaction) {
 		self.transaction = transaction
-		buyProductExp.fulfill()
+		purchaseProductExp.fulfill()
 	}
 	
 	func failed(transaction: SKPaymentTransaction) {
 		self.transaction = transaction
-		buyProductExp.fulfill()
+		purchaseProductExp.fulfill()
 	}
 }

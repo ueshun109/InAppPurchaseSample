@@ -20,15 +20,18 @@ class DownloadProductTest: XCTestCase, DownloadedProductNotification {
 	private var productIds: [String]!
 	private var downloadError: DownloadProductError?
 	
-	override func setUp() {
+	override func setUpWithError() throws {
 		getProductExp = XCTestExpectation(description: "Download product item")
+		
+		session = try SKTestSession(configurationFileNamed: "Configuration")
+		session.disableDialogs = true
+		session.clearTransactions()
 		
 		downloadProduct.delegate = self
 	}
-	
+
 	func testIfThereNoUnexpectedSubscriptionProduct_Success() {
-		let url = Bundle.main.url(forResource: "Subscription", withExtension: "storekit")!
-		session = try! SKTestSession(contentsOf: url)
+		session = try! SKTestSession(configurationFileNamed: "Subscription")
 		session.disableDialogs = true
 		session.clearTransactions()
 		

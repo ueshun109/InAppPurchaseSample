@@ -13,7 +13,7 @@
       ],
       "productID" : "berry-blue",
       "referenceName" : "Berry Blue",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -28,7 +28,7 @@
       ],
       "productID" : "carrot-chops",
       "referenceName" : "Carrot Chops",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -43,7 +43,7 @@
       ],
       "productID" : "crazy-colada",
       "referenceName" : "Crazy Colada",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -58,7 +58,7 @@
       ],
       "productID" : "hulking-lemonade",
       "referenceName" : "Hulking Lemonade",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -73,7 +73,7 @@
       ],
       "productID" : "kiwi-cutie",
       "referenceName" : "Kiwi Cutie",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -88,7 +88,7 @@
       ],
       "productID" : "lemonberry",
       "referenceName" : "Lemonberry",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -103,7 +103,7 @@
       ],
       "productID" : "love-you-berry-much",
       "referenceName" : "Love You Berry Much",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -118,7 +118,7 @@
       ],
       "productID" : "mango-jambo",
       "referenceName" : "Mango Jambo",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -133,7 +133,7 @@
       ],
       "productID" : "one-in-a-melon",
       "referenceName" : "One in a Melon",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -148,7 +148,7 @@
       ],
       "productID" : "papas-papaya",
       "referenceName" : "Papa's Papaya",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -163,7 +163,7 @@
       ],
       "productID" : "peanut-butter-cup",
       "referenceName" : "Peanut Butter Cup",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -178,7 +178,7 @@
       ],
       "productID" : "sailor-man",
       "referenceName" : "Sailor Man",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -193,7 +193,7 @@
       ],
       "productID" : "thats-a-smore",
       "referenceName" : "That's a Smore!",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
@@ -208,7 +208,7 @@
       ],
       "productID" : "thats-berry-bananas",
       "referenceName" : "That's Berry Bananas",
-      "type" : "Consumable"
+      "type" : "NonConsumable"
     },
     {
       "displayPrice" : "0.99",
