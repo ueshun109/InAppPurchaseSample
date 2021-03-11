@@ -109,6 +109,7 @@
 				F41E2591251D7625008B4654 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		F41E2591251D7625008B4654 /* Products */ = {
 			isa = PBXGroup;
